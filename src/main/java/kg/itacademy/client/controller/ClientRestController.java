@@ -15,7 +15,7 @@ public class ClientRestController {
     private ClientService clientService;
 
     @GetMapping("/{userId}")
-    public ResponseEntity<?> getUserById(@PathVariable("userId") Integer userId){
+    public ResponseEntity<?> getUserById(@PathVariable("userId") Long userId){
         return ResponseEntity.ok(clientService.getClient(userId));
     }
 

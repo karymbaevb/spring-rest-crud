@@ -8,6 +8,10 @@ import lombok.Setter;
 @Setter
 @EqualsAndHashCode
 public class ClientModel {
-    private Integer clientId;
-    private String name;
+    private Long clientId;
+    private String firstname;
+    private String lastname;
+    private Integer age;
+    private String email;
+    private String phoneNumber;
 }
