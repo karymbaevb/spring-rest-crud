@@ -3,17 +3,15 @@ package kg.itacademy.client.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
-import java.time.LocalDateTime;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Table(name = "client")
 @Entity
 @Getter
 @Setter
-public class ClientEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class ClientEntity extends BaseEntity {
 
     @Column(name = "firstname", nullable = false)
     private String firstname;
@@ -29,9 +27,5 @@ public class ClientEntity {
 
     @Column(name = "phone_number", nullable = false)
     private String phoneNumber;
-
-    @Column(name = "created_at", nullable = false)
-    private LocalDateTime createdAt;
-
 
 }
